@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+<style>
+
+img{
+ float:left;
+}
+.logo{
+    max-height: 60px;
+}
+#link
+{
+text-align: center;
+}
+#myDiv1 {
+  
+     background-image: url('bg1.jpg');
+  text-align: left;
+
+  width: 90%;
+    height: 80vh;
+     background-size: cover;
+   margin: 80px;
+    padding: 10px;
+
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 25px;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+a {
+  position: relative;
+  color:black;
+  text-decoration: none;
+}
+
+a:hover {
+  color:DeepPink;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:Orange;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+a:hover::before {
+  transform: scaleX(1);
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color:DodgerBlue;
+  color: white;
+  padding: 14px 23px;
+  margin: 0px 0;
+  border: none;
+  cursor: pointer; 
+ width: 10%;
+box-sizing: border-box;
+font-size:16px;
+border-radius:30px;
+
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: 10%;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+
+
+.imgcontainer {
+
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  
+}
+.signupbtn {
+  
+  width: 10%;
+}
+
+
+.content{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+}
+.content .title{
+ 
+    color: #1f1f25;
+    font-size: 30px;
+    text-transform: Uppercase;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin-bottom: 15px;
+ text-transform: inherit;
+    
+    background: linear-gradient(120deg, #1c99fe 20.69%, #7644ff 50.19%,#fd4766 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content h1{
+    color: #1f1f25;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 90px;
+    text-transform: inherit;
+    width: 70%;
+}
+.content h1 span{
+    color: #fd4766;
+}
+.content p{
+    width: 55%;
+    color: #757575;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body style="background-color:pink;">
+
+
+
+
+
+<div id="myDiv1">
+
+<div id="link">
+
+<img src="logo.png" class="logo">
+<nav>
+
+
+  <ul>
+ 
+         <a href="Myweb.html"> <b>Home</b></a>&nbsp&nbsp&nbsp &nbsp <a href="about.html" ><b> About</b></a>&nbsp&nbsp&nbsp &nbsp<a href="contactt.html"><b>Contact</b></a>&nbsp&nbsp&nbsp &nbsp
+<a href="https://smattranslation.blogspot.com/?spref=tw"><b>Blog</b></a>
+&nbsp&nbsp&nbsp &nbsp
+<a href="Courses.html" ><b>Services</b></a>
+&nbsp&nbsp&nbsp &nbsp
+ 
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><b>Login</b></button>
+&nbsp&nbsp&nbsp &nbsp
+<button onclick="document.getElementById('id').style.display='block'" style="width:auto;"><b>Sign Up</b></button>
+&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp &nbsp
+
+</ul>
+</nav>
+</div>
+      <div class="content">
+          <span class="title">Web Designer</span>
+            <h1>Hello, I’m <span>Amish Sajid</span></h1>
+  
+            <p>I’m Web developer with extensive experience for over 2 years.My expertise is to create and Websites design,graphic design and many more...</p>
+            
+    
+
+<button onclick="document.getElementById('id2').style.display='block'" style="width:auto;"><b>Hire me</b></button>
+
+ 
+    </div>
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="javascript:alert('Login Sucessfully!!!!')" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:LightGray">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+          var myInput = document.getElementById("psw");
+
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+</div>
+
+
+
+
+
+<div id="id" class="modal">
+  <span onclick="document.getElementById('id').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="javascript:alert('Sign Up Sucessfully!!!!')">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="name@gmail.com" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must match with the first password you entered"required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id').style.display='none'" class="cancelbtn">Cancel</button>
+&nbsp&nbsp
+         <button  type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+          var myInput = document.getElementById("psw");
+
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+}
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+
+
+<div id="id2" class="modal">
+  
+  <form name="myForm"  class="modal-content animate" action="javascript:alert('Submitted!!!!')" onsubmit = "return(validate());" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id2').style.display='none'" class="close" title="Close Modal">&times;</span>
+     
+    </div>
+
+    <div class="container">
+   <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+         <input type="text" id="country" name="Country" placeholder="Country">
+    <label for="subject">Message</label>
+    <textarea id="subject" name="Subject" placeholder="Message.." style="height:150px;width:100%"></textarea>
+      <button type="submit">Submit</button>
+      <label>
+       
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id2').style.display='none'" class="cancelbtn">Cancel</button>
+     
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id2');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+    function validate()
+{
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("firstName must be filled out");
+    return false;
+  }
+let a = document.forms["myForm"]["lname"].value;
+  if (a == "") {
+    alert("lastName must be filled out");
+    return false;
+  }
+let b = document.forms["myForm"]["country"].value;
+  if (b == "") {
+    alert("country must be filled out");
+    return false;
+  }
+let c = document.forms["myForm"]["subject"].value;
+  if (c == "") {
+    alert("subject must be filled out");
+    return false;
+  }
+}
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
